@@ -1,0 +1,74 @@
+#include<stdlib.h>
+#include<stdio.h>
+#include<math.h>
+ int main () {
+ float I,V,t,R,Q;
+int dt;
+printf("\tEFECTO JOULE\n");
+printf("1.Cantidad de calor(Q)\n");
+printf("2.Intensidad de corriente (I)\n");
+printf("3.Tiempo (t)\n");
+printf("4.Resistencia electrica (R)\n");
+printf("\nSeleccione Dato a Calcular:");
+scanf("%d",&dt);
+switch (dt){
+case 1:
+printf("\ncalcular cantidad de calor(Q)\n");
+printf("ingrese la corriente:\n");
+scanf("%f",&I);
+printf("ingrese la resistencia:\n");
+scanf("%f",&R);
+printf("ingrese el tiempo en segundos:\n");
+scanf("%f",&t);
+Q=0.24*I*I*R*t;
+printf("la cantidad de calor es:%0.2f calorias",Q);
+break;
+case 2:
+printf("\nCalcular intensidad de corriente (I)\n");
+printf("ingrese el calor:\n");
+scanf("%f",&Q);
+printf("ingrese la resistencia:\n");
+scanf("%f",&R);
+printf("ingrese el tiempo en segundos:\n");
+scanf("%f",&t);
+I=Q/(0.24*R*t);
+    float raiz = pow(I,.5);
+printf("la intensidad de corriente es:%0.2f A",raiz);
+break;
+case 3:
+printf("\nCalcular el tiempo\n:");
+printf("ingrese el calor:\n");
+scanf("%f",&Q);
+printf("ingrese la corriente:\n");
+scanf("%f",&I);
+printf("ingrese la resistencia:\n");
+scanf("%f",&R);
+t=Q/(0.24*I*I*R);
+printf("el tiempo es %0.2f segundos:",t);
+case 4:
+    printf("\nCalcular resistencia electrica\n");
+    int op;
+    printf("1.calcular usando calor, corriente y tiempo.\n");
+    printf("2.Calcular usando corriente y voltaje\n");
+    printf("\tSeleccione una opcion:");
+    scanf("%d",&op);
+    if (op==1){
+        printf("\ningrese el calor:\n");
+        scanf("%f",&Q);
+        printf("ingrese la corriente:\n");
+        scanf("%f",&I);
+        printf("ingrese el tiempo:\n");
+        scanf("%f",&t);
+        R=Q/(0.24*I*I*t);
+        printf("la resistencia es de %0.2f Ohms",R);
+    }
+    else if (op==2){
+    printf("\ningrese el voltaje:\n");
+    scanf("%f",&V);
+    printf("ingrese la corriente:\n");
+    scanf("%f",&I);
+    R=V/I;
+    printf("la resistencia es de %0.2f Ohms",R);
+}
+}
+}
