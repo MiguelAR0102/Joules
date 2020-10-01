@@ -45,6 +45,7 @@ printf("ingrese la resistencia:\n");
 scanf("%f",&R);
 t=Q/(0.24*I*I*R);
 printf("el tiempo es %0.2f segundos:",t);
+break;
 case 4:
     printf("\nCalcular resistencia electrica\n");
     int op;
