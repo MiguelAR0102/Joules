@@ -53,6 +53,10 @@ case 4:
     printf("2.Calcular usando corriente y voltaje\n");
     printf("\tSeleccione una opcion:");
     scanf("%d",&op);
+     while (op!=1 && op!=2){
+        printf("opcion invalida, intente de nuevo:");
+        scanf("%d",&op);
+     }
     if (op==1){
         printf("\ningrese el calor:\n");
         scanf("%f",&Q);
@@ -70,6 +74,7 @@ case 4:
     scanf("%f",&I);
     R=V/I;
     printf("la resistencia es de %0.2f Ohms",R);
-}
-}
-}
+    }
+
+    }
+    }
