@@ -11,8 +11,12 @@ printf("3.Tiempo (t)\n");
 printf("4.Resistencia electrica (R)\n");
 printf("\nSeleccione Dato a Calcular:");
 scanf("%d",&dt);
+while (dt!=1 && dt!=2 && dt!=3 && dt!=4){
+    printf("Opcion invalida, intente de nuevo:\n");
+    scanf("%d",&dt);
+}
 switch (dt){
-case 1:
+    case 1:
 printf("\ncalcular cantidad de calor(Q)\n");
 printf("ingrese la corriente:\n");
 scanf("%f",&I);
@@ -75,6 +79,5 @@ case 4:
     R=V/I;
     printf("la resistencia es de %0.2f Ohms",R);
     }
-
     }
     }
